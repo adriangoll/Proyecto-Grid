@@ -1,0 +1,95 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #202031;
+    color: white;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "about"
+        "projects"
+        "contact"
+        "footer";
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    background-color: #3b3b82;
+    padding: 20px;
+}
+
+.sobre {
+    grid-area: about;
+    background-color: #2a2a50;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.proyectos {
+    grid-area: projects;
+    background-color: #2a2a50;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contacto {
+    grid-area: contact;
+    background-color: #2a2a50;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #11111e;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+
+.proyecto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.proyecto-grid article {
+    background-color: #3a3a60;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.proyecto-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 900px) {
+    .proyecto-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .proyecto-grid {
+        grid-template-columns: 1fr;
+    }
+}
